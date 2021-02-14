@@ -1,0 +1,27 @@
+.form-container{
+    width:80%;
+    margin: 50px auto 0 auto;
+    align-items: center;
+    justify-content: center;
+    height:80%;
+    display: flexbox;
+  // margin: 100px;
+   //padding-top:0%;
+ }
+ mat-card-header{
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 35px;
+   font-weight: bold;
+   padding-left:225px;
+   padding-bottom:15px;
+ }
+.row{
+  padding:10px;
+}
+mat-form-field{
+  width:250px;
+  padding-bottom:5px;
+}
+mat-card-content{
+  padding-left:255px;
+}

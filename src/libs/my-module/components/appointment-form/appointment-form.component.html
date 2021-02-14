@@ -1,0 +1,72 @@
+<form [formGroup]='appointmentForm' class="form-container">
+    <mat-card>
+        <mat-card-header>
+         Appointment
+        </mat-card-header>
+        <mat-card-content>
+            <div class='row'>
+                <div class='col-md-6'>
+                    <mat-form-field class='full-width'>
+                        <input formControlName='firstName' matInput placeholder="First Name">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field class='full-width'>
+                        <input formControlName='lastName' matInput placeholder="Last Name">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-6'>
+                    <mat-form-field class='full-width'>
+                        <input formControlName='passId' matInput placeholder="Passport ID">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-6'>
+                    <mat-form-field class='full-width'>
+
+                        <input formControlName='phoneNumber' matInput mask="(000) 000-0000"
+                            placeholder="Phone (000) 000-0000" value="" type='number'>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-6'>
+                    <mat-form-field class='full-width'>
+
+                        <input formControlName='emailAddress' matInput placeholder='Email Address (optional)'>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class='row'>
+                <mat-form-field>
+                    <input formControlName='hireDate' matInput [matDatepicker]="picker"
+                        placeholder='Date of Appointment'>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <div class='row'>
+                    <mat-form-field>
+
+                <input formControlName='chooseTime' matInput [ngxTimepicker]="timePicker"
+                            placeholder="Choose a time">
+                        <ngx-material-timepicker #timePicker></ngx-material-timepicker>
+                </mat-form-field>
+                </div>
+                <mat-form-field>
+                    <mat-label>Purpose of Appointment</mat-label>
+                    <mat-select [formControl]="visitings" multiple>
+                        <mat-option *ngFor="let visiting of visitingList" [value]="">{{visiting}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+
+        </mat-card-content>
+        <mat-card-actions>
+            <button (click)='submitForm' mat-raised-button color='primary'>Submit</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
