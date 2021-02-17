@@ -1,10 +1,10 @@
-.form-container{
+mat-card-content{
     width:80%;
     margin: 50px auto 0 auto;
     align-items: center;
     justify-content: center;
     height:80%;
-    display: flexbox;
+ 
   // margin: 100px;
    //padding-top:0%;
  }
@@ -13,15 +13,22 @@
    font-size: 35px;
    font-weight: bold;
    padding-left:225px;
-   padding-bottom:15px;
+ 
  }
-.row{
-  padding:10px;
-}
+
 mat-form-field{
-  width:250px;
-  padding-bottom:5px;
+  width:550px;
+  padding-bottom:4px;
+ 
+  display: float;
+  color:rgb(147, 203, 240);
+ 
 }
-mat-card-content{
-  padding-left:255px;
-}
+
+  mat-card-actions{
+display: float;
+  }
+  
+  
+  
+
